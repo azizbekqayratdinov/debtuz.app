@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(AuthController::class)->group(function(){
     Route::get('/' , 'welcome')->name('welcome');
-    Route::get('/clients' , 'clientsPage')->name('clientPage');
     Route::post('/login' , 'loginStore')->name('loginStore');
+});
+
+Route::controller(ClientController::class)->group(function(){
+    Route::get('/clients' , 'clientsPage')->name('clientsPage');
 });

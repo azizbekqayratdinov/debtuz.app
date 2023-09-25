@@ -33,7 +33,7 @@
                 <form method="POST" action="{{route('loginStore')}}" class="needs-validation" novalidate="">
                   <div class="form-group">
                     @csrf
-                    <label for="email">Login</label>
+                    <label for="text">Login</label>
                     <input id="text" type="text" class="form-control" name="login" tabindex="1" required autofocus>
                     
                   </div>

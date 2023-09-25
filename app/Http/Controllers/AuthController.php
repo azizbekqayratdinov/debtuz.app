@@ -10,9 +10,7 @@ class AuthController extends Controller
     public function welcome(){
         return view('welcome');
     }
-    public function clientsPage(){
-        return view('client');
-    }
+    
     
     public function LoginStore(Request $request)
     {
@@ -24,7 +22,7 @@ class AuthController extends Controller
         if (Auth::attempt($clients)) {
             $request->session()->regenerate();
  
-            return redirect()->route('clientPage');
+            return redirect()->route('clientsPage');
         }
  
         return back();

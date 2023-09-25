@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Clients</title>
+    <title>Debt</title>
     <!-- General CSS Files -->
     <link rel="stylesheet" href="assets/css/app.min.css">
     <!-- Template CSS -->
@@ -170,19 +170,19 @@
             <div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="#"> <img alt="image" src="assets/img/logo.png" class="header-logo" /> <span class="logo-name">Otika</span>
+                        <a href="index.html"> <img alt="image" src="assets/img/logo.png" class="header-logo" /> <span class="logo-name">Otika</span>
                         </a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">Main</li>
                         <li class="dropdown">
-                            <a href="{{route('clientsPage')}}" class="nav-link"><i class="fas fa-home" ></i><span>Clients</span></a>
+                            <a href="{{route('clientPage')}}" class="nav-link"><i data-feather="monitor"></i><span>Clients</span></a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link"><i class="fas fa-user-plus"></i><span>Add client</span></a>
+                            <a href="#" class="nav-link"><i class="fas fa-plus"></i><span>Add debt</span></a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link"><i class="fas fa-history"></i><span>History</span></a>
+                            <a href="#" class="nav-link"><i class="fas fa-minus"></i><span>Repayment</span></a>
                         </li>
                 </aside>
             </div>
@@ -199,24 +199,19 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th scope="col">№</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Obshaya summa</th>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{$debts}}
-                                        @php
-                                            foreach ($clients as $client) {
-                                        @endphp
                                         <tr>
-                                            <th scope="row">{{$i++}}</th>
-                                            <td><a href="#">{{$client->name}}</a></td>
-                                            <td>{{summa($client['id'])}}</td>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
                                         </tr>
-                                        @php
-                                    }
-                                        @endphp
                                     </tbody>
                                 </table>
 
@@ -314,9 +309,7 @@
             </div>
         </div>
         <footer class="main-footer">
-            <div class="footer-left">
-                <a href="#">Templateshub</a></a>
-            </div>
+            
             <div class="footer-right">
             </div>
         </footer>
