@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Login</title>
+  <title>Логин</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <link rel="stylesheet" href="assets/bundles/bootstrap-social/bootstrap-social.css">
@@ -27,27 +27,28 @@
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="card card-primary">
               <div class="card-header">
-                <h4>Login</h4>
+                <h4>Логин</h4>
               </div>
               <div class="card-body">
                 <form method="POST" action="{{route('loginStore')}}" class="needs-validation" novalidate="">
                   <div class="form-group">
                     @csrf
-                    <label for="text">Login</label>
-                    <input id="text" type="text" class="form-control" name="login" tabindex="1" required autofocus>
-                    
+                    <label for="text">Логин</label>
+                    <input id="text" type="text" class="form-control" name="login" value="{{old('login')}}" tabindex="1"autofocus>
+                    @error('login')
+                    <li style="color:red">{{$message}}</li>
+                    @enderror
                   </div>
                   <div class="form-group">
                     <div class="d-block">
-                      <label for="password" class="control-label">Password</label>
+                      <label for="password" class="control-label">Пароль</label>
                     </div>
-                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                    <input id="password" type="password" class="form-control" name="password" value="{{old('password')}}" tabindex="2">
+                    @error('password')
+                    <li style="color:red">{{$message}}</li>
+                    @enderror
                   </div>
                   <div class="form-group">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
-                      <label class="custom-control-label" for="remember-me">Remember Me</label>
-                    </div>
                   </div>
                   <div class="form-group">
                     <input class="btn btn-primary btn-lg btn-block" tabindex="4" type="submit" value="Login">

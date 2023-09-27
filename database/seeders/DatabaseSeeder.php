@@ -35,6 +35,11 @@ class DatabaseSeeder extends Seeder
             'phone'=>998933651304,
             'status'=>1
         ]);
+        Client::create([
+            'name'=>"Vitya",
+            'phone'=>998933651300,
+            'status'=>0
+        ]);
         debt::create([
             'client_id'=>1,
             'summa'=>5000,
@@ -66,6 +71,13 @@ class DatabaseSeeder extends Seeder
         debt::create([
             'client_id'=>3,
             'summa'=>5000,
+            'tovar'=>"Orbit",
+            'date'=>"30-sentyabr",
+            'plus_minus'=>"+"
+        ]);
+        debt::create([
+            'client_id'=>3,
+            'summa'=>5001,
             'tovar'=>"Orbit",
             'date'=>"30-sentyabr",
             'plus_minus'=>"+"

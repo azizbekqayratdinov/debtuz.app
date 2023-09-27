@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\DebtController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,4 +23,10 @@ Route::controller(AuthController::class)->group(function(){
 
 Route::controller(ClientController::class)->group(function(){
     Route::get('/clients' , 'clientsPage')->name('clientsPage');
+    Route::get('/addclient', 'addClientPage')->name('addclientpage');
+    Route::post('/addclient', 'addClient')->name('addclient');
+});
+
+Route::controller(DebtController::class)->group(function(){
+    Route::get('/debt/{client_id}' , 'debtPage')->name('debtPage');
 });

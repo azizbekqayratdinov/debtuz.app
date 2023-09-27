@@ -15,8 +15,8 @@ class AuthController extends Controller
     public function LoginStore(Request $request)
     {
         $clients = $request->validate([
-            'login' => ['required'],
-            'password' => ['required'],
+            'login' => 'required',
+            'password' => 'required'
         ]);
  
         if (Auth::attempt($clients)) {
