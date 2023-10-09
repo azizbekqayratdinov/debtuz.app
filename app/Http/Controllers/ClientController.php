@@ -34,4 +34,7 @@ class ClientController extends Controller
         ]);
         return $this->clientsPage();
     }
+    public function minus(Request $request){
+        
+    }
 }

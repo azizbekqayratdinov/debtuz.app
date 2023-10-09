@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
             'summa'=>5000,
             'tovar'=>"Snikers",
             'date'=>"29-sentyabr",
-            'plus_minus'=>"+"
+            'plus_minus'=>"-"
         ]);
         debt::create([
             'client_id'=>2,
@@ -59,7 +59,7 @@ class DatabaseSeeder extends Seeder
             'summa'=>70000,
             'tovar'=>"Pepsi",
             'date'=>"29-sentyabr",
-            'plus_minus'=>"+"
+            'plus_minus'=>"-"
         ]);
         debt::create([
             'client_id'=>2,

@@ -9,13 +9,13 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>О долгах</title>
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/app.min.css') }}">
     <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/components.css') }}">
     <!-- Custom style CSS -->
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/custom.css') }}">
+    <link rel='shortcut icon' type='image/x-icon' href='{{ URL::asset('assets/img/favicon.ico') }}' />
 </head>
 
 <body>
@@ -61,7 +61,8 @@
                                 <a href="#" class="dropdown-item"> <span
                                         class="dropdown-item-avatar
 											text-white"> <img alt="image"
-                                            src="assets/img/users/user-1.png" class="rounded-circle">
+                                            src="{{ URL::asset('assets/img/users/user-1.png') }}"
+                                            class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">John
                                             Deo</span>
                                         <span class="time messege-text">Please check your mail !!</span>
@@ -69,7 +70,8 @@
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span
                                         class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                                        <img alt="image" src="{{ URL::asset('assets/img/users/user-2.png') }}"
+                                            class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
                                             Smith</span> <span class="time messege-text">Request for leave
                                             application</span>
@@ -77,14 +79,16 @@
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span
                                         class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="assets/img/users/user-5.png" class="rounded-circle">
+                                        <img alt="image" src="{{ URL::asset('assets/img/users/user-5.png') }}"
+                                            class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
                                             Ryan</span> <span class="time messege-text">Your payment invoice is
                                             generated.</span> <span class="time">12 Min Ago</span>
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span
                                         class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle">
+                                        <img alt="image" src="{{ URL::asset('assets/img/users/user-4.png') }}"
+                                            class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
                                             Smith</span> <span class="time messege-text">hii John, I have upload
                                             doc
@@ -93,7 +97,8 @@
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span
                                         class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="assets/img/users/user-3.png" class="rounded-circle">
+                                        <img alt="image" src="{{ URL::asset('assets/img/users/user-3.png') }}"
+                                            class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
                                             Joshi</span> <span class="time messege-text">Please do as specify.
                                             Let me
@@ -102,7 +107,8 @@
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span
                                         class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                                        <img alt="image" src="{{ URL::asset('assets/img/users/user-2.png') }}"
+                                            class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
                                             Smith</span> <span class="time messege-text">Client Requirements</span>
                                         <span class="time">2 Days Ago</span>
@@ -173,7 +179,7 @@
                     </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image"
-                                src="assets/img/user.png" class="user-img-radious-style"> <span
+                                src="{{ URL::asset('assets/img/user.png') }}" class="user-img-radious-style"> <span
                                 class="d-sm-none d-lg-inline-block"></span></a>
                         <div class="dropdown-menu dropdown-menu-right pullDown">
                             <div class="dropdown-title">Hello Sarah Smith</div>
@@ -197,7 +203,8 @@
             <div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="#"> <img alt="image" src="assets/img/logo.png" class="header-logo" />
+                        <a href="#"> <img alt="image" src="{{ URL::asset('assets/img/logo.png') }}"
+                                class="header-logo" />
                             <span class="logo-name">DEBT.UZ</span>
                         </a>
                     </div>
@@ -208,8 +215,12 @@
                                     class="fas fa-home"></i><span>Клиенты</span></a>
                         </li>
                         <li class="dropdown">
-                            <a href="{{ route('addclient') }}" class="nav-link"><i
-                                    class="fas fa-user-plus"></i><span>Добавить клиент</span></a>
+                            <a href="#" class="nav-link"><i class="fas fa-plus"></i><span>Добавить
+                                    долг</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link"><i class="fas fa-minus"></i><span>Возврат
+                                    долг</span></a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="nav-link"><i class="fas fa-history"></i><span>История</span></a>
@@ -222,26 +233,30 @@
                     <div class="section-body">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Клиенты</h4>
+                                <h4>Долги <u style="color:blue">{{ $single[0]['name'] }}а |
+                                        {{ $single[0]['phone'] }}</u></h4>
                             </div>
                             <div class="card-body">
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
                                             <th scope="col">№</th>
-                                            <th scope="col">Имя</th>
-                                            <th scope="col">Телефон</th>
-                                            <th scope="col">Общая сумма</th>
+                                            <th scope="col">Долг</th>
+                                            <th scope="col">Дата</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{ $single }}
-                                        @foreach ($single as $val)
+                                        @foreach ($debts as $val)
                                             <tr>
-                                                <th scope="row">{{$i++}}</th>
-                                                <td>{{ $val['name'] }}</td>
-                                                <td>{{ $val['phone'] }}</td>
-                                                <td>{{ summa($val['id']) }}</td>
+                                                <th scope="row">{{ $i++ }}</th>
+                                                <td
+                                                    @if ($val['plus_minus'] == '+') 
+                                                    style="color:rgb(103, 174, 32)"
+                                                    @elseif($val['plus_minus'] == '-')
+                                                    style="color:rgb(251, 1, 1)" 
+                                                    @endif>
+                                                    <b>{{$val['plus_minus']}} {{ $val['summa'] }}</b></td>
+                                                <td>{{ $val['date'] }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -356,13 +371,13 @@
     </div>
     </div>
     <!-- General JS Scripts -->
-    <script src="assets/js/app.min.js"></script>
+    <script src="{{ URL::asset('assets/js/app.min.js') }}"></script>
     <!-- JS Libraies -->
     <!-- Page Specific JS File -->
     <!-- Template JS File -->
-    <script src="assets/js/scripts.js"></script>
+    <script src="{{ URL::asset('assets/js/scripts.js') }}"></script>
     <!-- Custom JS File -->
-    <script src="assets/js/custom.js"></script>
+    <script src="{{ URL::asset('assets/js/custom.js') }}"></script>
 </body>
 
 
